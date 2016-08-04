@@ -1,0 +1,6 @@
+#SparkStreaming-DataTransform-cwx
+SparkStreaming-DataTransform-cwx是一个对用sparkStreaming对用户和商品数据数据进行转化和存储到hbase的例子。
+具体的操作是kafka队列获取user和item的json字符串，实时推到spark平台的用scala调用sparkStreaming接口进行数据的处理，将处理完的数据推到hbase中。
+细节：
+1: 将字符串转化成json,并且提取出用户和商品信息的相关属性
+2：调用自己编写hbase api把处理完的数据put到hbase中
